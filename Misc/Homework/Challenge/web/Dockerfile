@@ -1,4 +1,4 @@
-FROM php:7.3.31-apache
+FROM php:8.1-apache
 
 RUN apt-get update && apt-get upgrade -y && apt-get install sudo && \
     mkdir /var/www/html/response
