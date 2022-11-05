@@ -1,4 +1,4 @@
-FROM ruby:3.1.1-alpine
+FROM ruby:3-slim-bullseye
 
 RUN apk update \
     && apk add --virtual build-dependencies build-base
