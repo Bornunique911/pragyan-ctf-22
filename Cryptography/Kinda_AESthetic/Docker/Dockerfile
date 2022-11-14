@@ -1,4 +1,4 @@
-FROM python:3.9-slim-buster
+FROM python:3.12-rc-slim
 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends autoconf bison flex gcc g++ git libprotobuf-dev libnl-route-3-dev libtool make pkg-config protobuf-compiler && \
