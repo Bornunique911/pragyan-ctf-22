@@ -1,4 +1,4 @@
-FROM ubuntu AS build
+FROM ubuntu:kinetic-20220830 AS build
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update && apt-get install -y \
@@ -20,7 +20,7 @@ RUN apt-get -y update && apt-get install -y \
 
 RUN git clone https://github.com/google/nsjail.git /nsjail && cd /nsjail && make
 
-FROM ubuntu
+FROM ubuntu:kinetic-20220830
 RUN apt-get update && \
     apt-get install -y libprotobuf-dev libnl-route-3-200 protobuf-compiler && \
     rm -rf /var/lib/apt/lists/
